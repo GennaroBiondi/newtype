@@ -1,6 +1,7 @@
 use chrono::{TimeZone, Utc};
 use std::time::{SystemTime, UNIX_EPOCH};
 
+#[derive(Debug)]
 pub struct UnixTimestamp(pub i64);
 
 impl UnixTimestamp {
