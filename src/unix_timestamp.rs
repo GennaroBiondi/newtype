@@ -18,4 +18,9 @@ impl UnixTimestamp {
         let dt = Utc.timestamp_opt(self.0, 0).single().unwrap();
         dt.to_rfc3339()
     }
+
+    pub fn is_due(&self) -> bool {
+        let now = UnixTimestamp::now();
+        self.0 <= now.0
+    }
 }
