@@ -47,6 +47,6 @@ impl UnixTimestamp {
     }
 
     pub fn passed_from(&self, from: &UnixTimestamp) -> bool {
-        self.0 <= from.0
+        self.0 >= from.0
     }
 }
