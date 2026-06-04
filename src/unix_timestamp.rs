@@ -46,7 +46,7 @@ impl UnixTimestamp {
         &Self::now() - self
     }
 
-    pub fn passed_from(&self, from: Self) -> bool {
+    pub fn passed_from(&self, from: &UnixTimestamp) -> bool {
         self.0 <= from.0
     }
 }
