@@ -43,7 +43,8 @@ impl UnixTimestamp {
     }
 
     pub fn from_ago(&self) -> UnixTimestamp {
-        &Self::now() - self
+        let now = Self::now();
+        &now - self
     }
 
     pub fn passed_from(&self, from: &UnixTimestamp) -> bool {
